@@ -139,12 +139,13 @@ class ViewController: UIViewController {
     
     
     
-    stackView.addArrangedSubview(dateText)
+    stackView.addArrangedSubview(dateLabel)
     stackView.addArrangedSubview(dateimageView)
     stackView.addArrangedSubview(timeText)
     stackView.addArrangedSubview(timeimageView)
     stackView.addArrangedSubview(spaceLabel)
     stackView.addArrangedSubview(moodİmageView)
+    
     
     //toolbar
     let toolBar = UIToolbar()
@@ -159,8 +160,10 @@ class ViewController: UIViewController {
     // assign toolbar
     dateText.inputAccessoryView = toolBar
     timeText.inputAccessoryView = toolBar
-    
-    
+   
+    dateLabel.isUserInteractionEnabled = true
+    let labelTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(datePressed))
+           dateLabel.addGestureRecognizer(labelTapRecognizer)
     
     // assign date picker to tha text field
     dateText.inputView = datePicker
@@ -174,9 +177,16 @@ class ViewController: UIViewController {
     //Constraints
     
     stackView.frame = CGRect(x: 10, y: navigationBar.bottom, width: view.width-20, height: 70)
+    
+    stackView.isUserInteractionEnabled = true
+    
   
   }
+  @objc func datePressed() {
+performSegue(withIdentifier: "toCalendarVC", sender: nil)
+  }
   @objc func donePressed() {
+    
     
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .full
@@ -190,10 +200,14 @@ class ViewController: UIViewController {
     timeFormatter.locale = .current
     timeFormatter.dateFormat = "HH:mm"
     
+    dateLabel.text = dateFormatter.string(from: datePicker.date)
     dateText.text = dateFormatter.string(from: datePicker.date)
     timeText.text = timeFormatter.string(from: datePicker.date)
     self.view.endEditing(true)
     view.frame.origin.y = 0
+    
+    
+  
   }
   @objc func cancelPressed() {
     self.view.endEditing(true)

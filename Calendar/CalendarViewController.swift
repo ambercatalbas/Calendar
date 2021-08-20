@@ -26,11 +26,21 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     label.numberOfLines = 0
     return label
   }()
+  private let okButton : UIButton = {
+    let button = UIButton()
+    button.backgroundColor = .blue
+    button.titleLabel?.text = "OK"
+    return button
+  }()
     override func viewDidLoad() {
         super.viewDidLoad()
       
       self.view.addSubview(dateLabel)
+      self.view.addSubview(okButton)
+      
       dateLabel.frame = CGRect(x: 10, y: view.width+50, width: view.width-20, height: 150)
+      okButton.frame = CGRect(x: 10, y: dateLabel.bottom, width: view.width-20, height: 50)
+    
       
       calendar = FSCalendar(frame: CGRect(x: 0.0, y: 40.0, width: view.width, height: view.width))
       calendar.scrollDirection = .horizontal
@@ -75,15 +85,15 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
   }
 //MARK:- Delegate
   func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-    formatter.dateFormat = "dd-MMM-yyyy"
+    formatter.dateFormat = "dd-MM-yyyy"
     print(formatter.string(from: date))
     dateLabel.text = formatter.string(from: date)
   }
   // multiple select
   func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-    formatter.dateFormat = "dd-MMM-yyyy"
+    formatter.dateFormat = "dd-MM-yyyy"
     print(formatter.string(from: date))
-    dateLabel.text = formatter.string(from: date)
+    //dateLabel.text = formatter.string(from: date)
   }
   //making a particular date unselectable
   func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
