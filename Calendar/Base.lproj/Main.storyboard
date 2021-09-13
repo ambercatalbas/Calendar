@@ -21,12 +21,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En5-Z4-Gxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552" y="-105"/>
+            <point key="canvasLocation" x="3530" y="-147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pFY-3w-Fg7">
             <objects>
-                <viewController id="cdU-9R-Tzn" customClass="ViewController" customModule="daynote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cdU-9R-Tzn" customClass="ViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1S4-03-oM5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

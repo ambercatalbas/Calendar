@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1BE18DD9847FCC529E734862 /* Pods_Calendar_CalendarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA03D8CD1EE2202A1D9784C /* Pods_Calendar_CalendarUITests.framework */; };
+		4EE4E32C26EFE03700B203B8 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E32B26EFE03700B203B8 /* Label.swift */; };
+		4EE4E34626EFE18D00B203B8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E34226EFE18C00B203B8 /* Font.swift */; };
+		4EE4E34726EFE18D00B203B8 /* InformingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E34326EFE18C00B203B8 /* InformingState.swift */; };
+		4EE4E34826EFE18D00B203B8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E34426EFE18C00B203B8 /* Color.swift */; };
+		4EE4E34926EFE18D00B203B8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E34526EFE18D00B203B8 /* Text.swift */; };
+		4EE4E34B26EFE26500B203B8 /* AttributedStringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4E34A26EFE26500B203B8 /* AttributedStringUtility.swift */; };
 		64EC095A26CE6B1800502632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC095926CE6B1800502632 /* AppDelegate.swift */; };
 		64EC095C26CE6B1800502632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC095B26CE6B1800502632 /* SceneDelegate.swift */; };
 		64EC095E26CE6B1800502632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC095D26CE6B1800502632 /* ViewController.swift */; };
@@ -43,6 +49,12 @@
 /* Begin PBXFileReference section */
 		09C833E4502F506E5B7C583B /* Pods-CalendarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarTests.release.xcconfig"; path = "Target Support Files/Pods-CalendarTests/Pods-CalendarTests.release.xcconfig"; sourceTree = "<group>"; };
 		0C14FE064EC3D57FD60B82EA /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		4EE4E32B26EFE03700B203B8 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		4EE4E34226EFE18C00B203B8 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		4EE4E34326EFE18C00B203B8 /* InformingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformingState.swift; sourceTree = "<group>"; };
+		4EE4E34426EFE18C00B203B8 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4EE4E34526EFE18D00B203B8 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		4EE4E34A26EFE26500B203B8 /* AttributedStringUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtility.swift; sourceTree = "<group>"; };
 		64EC095626CE6B1800502632 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EC095926CE6B1800502632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EC095B26CE6B1800502632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +122,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4EE4E32F26EFE0B900B203B8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E34426EFE18C00B203B8 /* Color.swift */,
+				4EE4E34226EFE18C00B203B8 /* Font.swift */,
+				4EE4E34326EFE18C00B203B8 /* InformingState.swift */,
+				4EE4E34526EFE18D00B203B8 /* Text.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		573A24991B598E433438BEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +168,7 @@
 		64EC095826CE6B1800502632 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4E32F26EFE0B900B203B8 /* UI */,
 				64EC098E26CE6F3E00502632 /* Extensions */,
 				64EC095926CE6B1800502632 /* AppDelegate.swift */,
 				64EC095B26CE6B1800502632 /* SceneDelegate.swift */,
@@ -154,6 +178,8 @@
 				64EC096226CE6B1D00502632 /* Assets.xcassets */,
 				64EC096426CE6B1D00502632 /* LaunchScreen.storyboard */,
 				64EC096726CE6B1D00502632 /* Info.plist */,
+				4EE4E32B26EFE03700B203B8 /* Label.swift */,
+				4EE4E34A26EFE26500B203B8 /* AttributedStringUtility.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -424,10 +450,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EC099626CE70AC00502632 /* CalendarViewController.swift in Sources */,
+				4EE4E34726EFE18D00B203B8 /* InformingState.swift in Sources */,
 				64EC095E26CE6B1800502632 /* ViewController.swift in Sources */,
+				4EE4E34826EFE18D00B203B8 /* Color.swift in Sources */,
 				64EC095A26CE6B1800502632 /* AppDelegate.swift in Sources */,
 				64EC099226CE6F3E00502632 /* UIView+Extension.swift in Sources */,
+				4EE4E34626EFE18D00B203B8 /* Font.swift in Sources */,
+				4EE4E34B26EFE26500B203B8 /* AttributedStringUtility.swift in Sources */,
 				64EC099426CE6F3E00502632 /* Array+Equatable.swift in Sources */,
+				4EE4E32C26EFE03700B203B8 /* Label.swift in Sources */,
+				4EE4E34926EFE18D00B203B8 /* Text.swift in Sources */,
 				64EC095C26CE6B1800502632 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
